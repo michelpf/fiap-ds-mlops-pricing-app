@@ -88,13 +88,13 @@ ram_size = st.selectbox(
     "Qual é o tamanho da memória RAM?",
     ("4 GB", "8 GB", "16 GB", "32 GB",))
 
-ssd_size = st.selectbox(
-    "Qual é o tamanho do armazenamento em disco estado sólido (SSD)?",
-    ("Sem SSD (apenas HDD)", "512 GB", "1 TB", "2 TB"))
-
 hdd_size = st.selectbox(
+    "Qual é o tamanho do armazenamento em disco estado sólido (SSD)?",
+    ("Sem HDD (apenas SSD)", "512 GB", "1 TB", "2 TB"))
+
+ssd_size = st.selectbox(
     "Qual é o tamanho do armazenamento em disco rígido (HDD)?",
-    ("Sem HDD (apenas SSD)", "128 GB", "256 GB", "512 GB", "1 TB", "2 TB", "3 TB"))
+    ("Sem SSD (apenas HDD)", "128 GB", "256 GB", "512 GB", "1 TB", "2 TB", "3 TB"))
 
 
 graphic_card_option = st.selectbox(
