@@ -12,7 +12,7 @@ Foi construída baseda numa solução fim-a-fim de machine learning, que inclui:
 * Implantação automatizada por pipelines de CD/CI em container
 * API com credenciais de segurança
 
-Componentes utilizados:
+## Componentes utilizados:
 
 * Frontend: [Streamlit](https://streamlit.io/)
 * Pipeline de machine learning [CML](https://cml.dev/)
@@ -22,3 +22,9 @@ Componentes utilizados:
 * Conteinerização (Docker)[https://www.docker.com/]
 * Registro de modelos (AWS ECR)[https://aws.amazon.com/pt/ecr/]
 * Serverless backend (AWS Lambda for Containers)[https://aws.amazon.com/pt/lambda/]
+
+## Uso
+
+Esta aplicação está configurada no Streamlit Cloud de tal forma que qualquer modificação na branch ```master``` será lançada uma nova atualização.
+
+Para realizar depuração local utilizando o VSCode, utilze o ```launch.json``` que possui as configurações necessárias.
