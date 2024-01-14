@@ -1,6 +1,6 @@
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://laptopricing.streamlit.app)
 
-# Aplicação para predição de preços de laptop
+# Aplicação para Predição de Preços de Laptop
 
 Esta aplicação (frontend) é a camada de entrada dos usuários para, a partir de determinadas informações como processador, memória e CPU, obter o valor estimado de um laptop.
 
