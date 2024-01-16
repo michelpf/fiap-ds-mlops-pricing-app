@@ -86,9 +86,9 @@ ram_type = st.radio(
 
 ram_size = st.number_input("Qual é o tamanho da memória RAM em GB?", step=4)
 
-hdd_size = st.number_input("Qual é o tamanho do armazenamento em disco estado sólido (SSD) em GB?", step=512, placeholder="Coloque 0 se não houver apenas SSD.")
+hdd_size = st.number_input("Qual é o tamanho do armazenamento em disco estado sólido (HDD) em GB?", step=512, placeholder="Coloque 0 se houver apenas SSD.")
 
-ssd_size = st.number_input("Qual é o tamanho do armazenamento em disco estado sólido (SSD) em GB?", step=512, placeholder="Coloque 0 se não houver apenas HDD.")
+ssd_size = st.number_input("Qual é o tamanho do armazenamento em disco estado sólido (SSD) em GB?", step=128, placeholder="Coloque 0 se houver apenas HDD.")
 
 graphic_card_option = st.number_input("Qual é o tamanho da memória gráfica (vídeo) em GB?", step=4)
 
