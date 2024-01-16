@@ -76,10 +76,6 @@ weight = st.radio(
     ["Casual", "Gaming", "Thinlight"],
     captions = ["Peso padrão", "Pesado", "Leve"])
 
-warranty = st.radio(
-    "Qual a garantia atual?",
-    ["Sem garantia", "1 ano", "2 anos", "3 anos"])
-
 ram_type = st.radio(
     "Qual o tipo da memória RAM?",
     ["DDR4", "Outro"])
