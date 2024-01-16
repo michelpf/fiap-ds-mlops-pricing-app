@@ -59,6 +59,8 @@ processor_brand = st.radio(
     "Qual a marca do processor?",
     ["AMD", "Intel", "M1"])
 
+warranty = st.number_input("Quantos anos de garantia?", step=1, placeholder="Coloque 0 se não houver garantina.")
+
 brand_option = st.selectbox(
     "Qual é o nome do processador?",
     ("Core i3", "Core i5 ", "Core i7", "Ryzen 5", "Ryzen 7", "Outro"),)
@@ -81,12 +83,10 @@ ram_type = st.radio(
     ["DDR4", "Outro"])
 
 ram_size = st.number_input("Qual é o tamanho da memória RAM em GB?", step=4)
-
+graphic_card_option = st.number_input("Qual é o tamanho da memória gráfica (vídeo) em GB?", step=4)
 hdd_size = st.number_input("Qual é o tamanho do armazenamento em disco estado sólido (HDD) em GB?", step=512, placeholder="Coloque 0 se houver apenas SSD.")
-
 ssd_size = st.number_input("Qual é o tamanho do armazenamento em disco estado sólido (SSD) em GB?", step=128, placeholder="Coloque 0 se houver apenas HDD.")
 
-graphic_card_option = st.number_input("Qual é o tamanho da memória gráfica (vídeo) em GB?", step=4)
 
 if brand_option == "Outro":
     brand_option = "other"
@@ -94,7 +94,6 @@ if brand_option == "Outro":
 if os_brand == "Outro":
     os_brand = "other"
 
-warranty = st.number_input("Quantos anos de garantia?", step=1, placeholder="Coloque 0 se não houver garantina.")
 
 os_bit = os_bit.replace(" bits", "")
 
