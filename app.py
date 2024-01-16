@@ -84,22 +84,13 @@ ram_type = st.radio(
     "Qual o tipo da memória RAM?",
     ["DDR4", "Outro"])
 
-ram_size = st.selectbox(
-    "Qual é o tamanho da memória RAM?",
-    ("4 GB", "8 GB", "16 GB", "32 GB",))
+ram_size = st.number_input("Qual é o tamanho da memória RAM em GB?", step=4)
 
-hdd_size = st.selectbox(
-    "Qual é o tamanho do armazenamento em disco estado sólido (SSD)?",
-    ("Sem HDD (apenas SSD)", "512 GB", "1 TB", "2 TB"))
+hdd_size = st.number_input("Qual é o tamanho do armazenamento em disco estado sólido (SSD) em GB?", step=512, placeholder="Coloque 0 se não houver apenas SSD.")
 
-ssd_size = st.selectbox(
-    "Qual é o tamanho do armazenamento em disco rígido (HDD)?",
-    ("Sem SSD (apenas HDD)", "128 GB", "256 GB", "512 GB", "1 TB", "2 TB", "3 TB"))
+ssd_size = st.number_input("Qual é o tamanho do armazenamento em disco estado sólido (SSD) em GB?", step=512, placeholder="Coloque 0 se não houver apenas HDD.")
 
-
-graphic_card_option = st.selectbox(
-    "Qual é o tamanho da memória gráfica (vídeo)?",
-    ("4 GB", "8 GB", "16 GB", "32 GB"))
+graphic_card_option = st.number_input("Qual é o tamanho da memória gráfica (vídeo) em GB?", step=4)
 
 if brand_option == "Outro":
     brand_option = "other"
@@ -107,34 +98,18 @@ if brand_option == "Outro":
 if os_brand == "Outro":
     os_brand = "other"
 
-if warranty == "Sem garantia":
-    warranty = "0"
-else:
-    warranty = warranty.replace(" ano", "")
-    warranty = warranty.replace(" anos", "")
+warranty = st.number_input("Quantos anos de garantia?", step=1, placeholder="Coloque 0 se não houver garantina.")
 
 os_bit = os_bit.replace(" bits", "")
 
 if ram_type == "Outro":
     ram_type = "other"
 
-ram_size = ram_size.replace(" GB", "")
-
-hdd_size = hdd_size.replace("Sem HDD (apenas SSD)", "0")
-hdd_size = hdd_size.replace(" GB", "")
-hdd_size = hdd_size.replace(" TB", "")
-
-ssd_size = hdd_size.replace("Sem SSD (apenas HDD)", "0")
-ssd_size = ssd_size.replace(" GB", "")
-ssd_size = ssd_size.replace(" TB", "")
-
 
 if touchscreen=="Sim":
     touchscreen = "1"
 else:
     touchscreen = "0"
-
-graphic_card_option = graphic_card_option.replace(" GB", "")
 
 payload = { "data" : {
         "brand": brand_option.lower(),
