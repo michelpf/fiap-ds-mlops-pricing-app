@@ -26,8 +26,6 @@ def get_prediction(data):
         locale.setlocale(locale.LC_ALL, 'pt_BR')
         predicted_value_formatted = locale.format_string("%d", result['prediction'], grouping=True)
 
-
-        st.markdown("Modelo consultado com sucesso.")
         st.markdown("Valor para compra: **" + str(predicted_value_formatted) + " IND (India Rupee)**.")
     else:
         st.markdown("Houve um problema na consulta. Revise os dados.")
